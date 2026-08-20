@@ -1,0 +1,44 @@
+# Model weights — never commit, downloaded at runtime via MODEL_URL
+*.pth
+*.pt
+*.h5
+*.onnx
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+venv/
+env/
+*.egg-info/
+
+# Env files (contain secrets/URLs — set these in Render/Vercel dashboards instead)
+.env
+.env.local
+.env.*.local
+backend/.env
+
+# Node / frontend build
+node_modules/
+frontend/vite-project/dist/
+frontend/vite-project/dist-ssr/
+*.local
+
+# OS / editor
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,0 +1,193 @@
+body {
+  background-color: #1E293B; /* Dark blue-gray */
+  color: #F8FAFC;
+  transition: all 0.5s ease-in-out;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main h2 {
+  background-color: #0EA5E9; /* Primary blue accent */
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+}
+
+.image-grp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+.image-grp img,
+.gradcam-container img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hidden {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.gradcam-image-loaded {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.container input {
+  padding-bottom: 40px;
+  margin-top: 50px;
+}
+
+input[type="file"] {
+  border: 2px solid #0EA5E9;
+  padding: 10px;
+  background-color: #0EA5E9;
+  color: white;
+  border-radius: 10px;
+  height: 25px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  background-color: #1E293B;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.container button {
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #0EA5E9;
+  color: white;
+  height: 40px;
+  border: 2px solid #0EA5E9;
+  margin-bottom: 10px;
+  padding: 10px 10px;
+  font-weight: 700;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-grp {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #38BDF8; /* Brighter blue */
+}
+
+.text-red {
+  color: #EF4444;
+  font-weight: 900;
+}
+
+.text-green {
+  color: #10B981;
+  font-weight: 900;
+}
+
+.bold {
+  color: white;
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+
+.text-green:hover,
+.text-red:hover {
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+img {
+  opacity: 1;
+  transform: scale(0.9);
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+img.loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.gradcam-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.gradcam-image {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+img.hidden {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.mosquito-animation {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 10%;
+  left: 10%;
+  animation: fly-within-container 4s infinite linear;
+}
